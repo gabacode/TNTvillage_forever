@@ -11,6 +11,7 @@ export type Record = {
 };
 
 export enum Categories {
+  "Magnet Link" = 0,
   "Film TV e programmi" = 1,
   "Musica" = 2,
   "E Books" = 3,

@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useState } from "react";
+import { ChangeEvent, Dispatch, SetStateAction, useState } from "react";
 import { useSearch } from "../../hooks";
 import { Record } from "../../types";
 
@@ -8,6 +8,10 @@ interface Props {
 
 export const SearchBar = ({ setResults }: Props) => {
   const [query, setQuery] = useState("");
+
+  const handleSetQuery = (e: ChangeEvent<HTMLInputElement>) => {
+    setQuery(e.target.value);
+  };
 
   const { handleSearch } = useSearch({ query, setResults });
 
@@ -19,11 +23,11 @@ export const SearchBar = ({ setResults }: Props) => {
           className="form-control me-2"
           spellCheck="false"
           value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder="Cerca..."
+          onChange={handleSetQuery}
+          placeholder="Cerca release"
         />
         <button className="btn btn-success" type="submit">
-          Vai
+          Cerca
         </button>
       </div>
     </form>
