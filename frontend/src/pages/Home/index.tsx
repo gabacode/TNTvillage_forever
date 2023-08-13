@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Record } from "../../types";
-import { Results } from "../Results";
-import { SearchBar } from "../SearchBar";
-import { Wrapper } from "../Wrapper";
+import { Results } from "../../components/organisms/Results";
+import { SearchBar } from "../../components/molecules/SearchBar";
+import { Wrapper } from "../../components/templates/Wrapper";
 
 export const Home = () => {
   const [results, setResults] = useState<Record[]>([]);

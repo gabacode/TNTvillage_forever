@@ -1,7 +1,7 @@
-import { useMagnet } from "../../hooks";
-import { Record } from "../../types";
+import { useMagnet } from "../../../hooks";
+import { Record } from "../../../types";
 import { Table } from "react-bootstrap";
-import { CategoryImage } from "./CategoryImage";
+import { CategoryImage } from "../../atoms/CategoryImage";
 
 interface Props {
   results: Record[];

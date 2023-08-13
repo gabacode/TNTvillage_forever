@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import headBanner from "../../assets/images/loghino.gif";
+import headBanner from "../../../assets/images/loghino.gif";
 
 interface Props {
   children: ReactNode;

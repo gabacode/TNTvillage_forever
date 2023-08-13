@@ -1,6 +1,6 @@
 import { ChangeEvent, Dispatch, SetStateAction, useState } from "react";
-import { useSearch } from "../../hooks";
-import { Record } from "../../types";
+import { useSearch } from "../../../hooks";
+import { Record } from "../../../types";
 
 interface Props {
   setResults: Dispatch<SetStateAction<Record[]>>;
