@@ -4,7 +4,13 @@
 
 ## Istruzioni
 
+1. Buildare i containers:
+
 ```bash
-docker-compose up
+docker-compose up --build -d
 ```
+
+2. Accesso al frontend:
+
+`http://localhost:3001`
 
