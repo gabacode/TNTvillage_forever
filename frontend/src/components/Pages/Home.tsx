@@ -1,15 +1,16 @@
 import { useState } from "react";
-import { Record } from "../types";
-import { Results } from "./Results";
-import { SearchBar } from "./SearchBar";
+import { Record } from "../../types";
+import { Results } from "../Results";
+import { SearchBar } from "../SearchBar";
+import { Wrapper } from "../Wrapper";
 
 export const Home = () => {
   const [results, setResults] = useState<Record[]>([]);
   return (
-    <div className="container">
+    <Wrapper>
       <SearchBar setResults={setResults} />
       <Results results={results} />
-    </div>
+    </Wrapper>
   );
 };
 

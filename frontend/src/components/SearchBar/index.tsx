@@ -26,9 +26,7 @@ export const SearchBar = ({ setResults }: Props) => {
           onChange={handleSetQuery}
           placeholder="Cerca release"
         />
-        <button className="btn btn-success" type="submit">
-          Cerca
-        </button>
+        <button type="submit">Cerca</button>
       </div>
     </form>
   );

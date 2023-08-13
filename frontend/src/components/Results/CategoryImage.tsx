@@ -7,7 +7,7 @@ interface Props {
 
 export const CategoryImage: React.FC<Props> = ({ category }) => {
   const getImage = (number: number): string =>
-    require(`../../assets/images/icon${number}.gif`);
+    require(`../../assets/icons/icon${number}.gif`);
   return <img src={getImage(category)} alt={Categories[category]} />;
 };
 
