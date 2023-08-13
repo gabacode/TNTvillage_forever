@@ -79,8 +79,7 @@ th {
 
 header {
   height: 100px;
-  background: linear-gradient(180deg, #fdd74d 0%, #feef88 100%);
-
+  background: linear-gradient(180deg, #feee89 20%, #fde459 60%);
   border-radius: 16.1803399px 16.1803399px 0px 0px;
   z-index: 1;
 }
