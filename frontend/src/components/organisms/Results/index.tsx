@@ -2,6 +2,7 @@ import { useMagnet } from "../../../hooks";
 import { Record } from "../../../types";
 import { Table } from "react-bootstrap";
 import { CategoryImage } from "../../atoms/CategoryImage";
+import { useMemo } from "react";
 
 interface Props {
   results: Record[];
@@ -10,17 +11,9 @@ interface Props {
 export const Results = ({ results }: Props) => {
   const { getMagnetLink, getDimension } = useMagnet();
 
-  return results.length > 0 ? (
-    <Table striped bordered hover>
-      <thead>
-        <tr>
-          <th>M</th>
-          <th>Cat</th>
-          <th>Titolo</th>
-          <th>Dimensione</th>
-        </tr>
-      </thead>
-      <tbody>
+  const resultComponent = useMemo(() => {
+    return (
+      <>
         {results.map((result, index) => (
           <tr key={index}>
             <td className="text-center">
@@ -43,7 +36,21 @@ export const Results = ({ results }: Props) => {
             </td>
           </tr>
         ))}
-      </tbody>
+      </>
+    );
+  }, [getDimension, getMagnetLink, results]);
+
+  return results.length > 0 ? (
+    <Table striped bordered hover>
+      <thead>
+        <tr>
+          <th>M</th>
+          <th>Cat</th>
+          <th>Titolo</th>
+          <th>Dimensione</th>
+        </tr>
+      </thead>
+      <tbody>{resultComponent}</tbody>
     </Table>
   ) : (
     <div />
