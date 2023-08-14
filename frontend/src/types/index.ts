@@ -41,5 +41,6 @@ export enum Categories {
   "Podcast" = 35,
   "Edicola" = 36,
   "Mobile" = 37,
+  "Cultura Libera" = 38,
 }
 
