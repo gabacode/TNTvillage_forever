@@ -1,0 +1,16 @@
+{
+  "short_name": "TNTVillage Forever",
+  "name": "TNTVillage Forever - Scambio Etico",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#6b9129",
+  "background_color": "#ffffff"
+}
+
