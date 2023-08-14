@@ -1,11 +1,11 @@
 import { Router } from "express";
-import Record from "../models/recordModel";
+import Record from "../models/recordModel.js";
 
 const router = Router();
 
 router.get("/search", async (req, res) => {
   try {
-    const searchQuery = req.query.q as string;
+    const searchQuery = req.query.q;
     const results = await Record.find({
       $text: { $search: searchQuery },
     });

@@ -2,7 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 
-import { mainRoutes, searchRoutes } from "./routes";
+import { mainRoutes, searchRoutes } from "./routes/index.js";
 
 const app = express();
 const PORT = 5000;

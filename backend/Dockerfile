@@ -1,13 +1,7 @@
-FROM node:18 AS builder
+FROM node:18
 WORKDIR /app
-COPY . .
-RUN yarn install
-RUN yarn build
-
-FROM node:18 AS final
-WORKDIR /app
-COPY --from=builder /app/dist ./dist
 COPY package.json .
 COPY yarn.lock .
-RUN yarn install --frozen-lockfile --production
+RUN yarn install
+COPY . .
 CMD [ "yarn", "start" ]
